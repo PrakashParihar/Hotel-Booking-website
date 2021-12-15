@@ -4,13 +4,48 @@
     </head>
     <body>
         <header>
-        <img src="logo.png" alt="logo" height="200px" width="150px">
+            <div class="header" id="header">
+                <div id="h1">
+                    <a href="index.html" target="_self"><img class="header-logo"src="assests/images/logo.png" alt="logo"  height="200px" width="150px"></a></div>
+                </div>
+            </div>
         <div><a href="login.html" target="_blank">login</a>  
-        </div></header>
-        <div>
+        </div>
+    </header>
+        <div class="content">
             <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg
             " height="500px" width="500px">
-            <a href="payment.html" target="_blank">Book Now</a>
+            
+            <div class="formDiv">
+                <form method="get" action="payment.html" target="_self" autocomplete="off">
+                    <ul style="list-style-type: none;">
+                    <li class="listSty">
+                        <label class="labelSty" for="adults">Adults:</label>
+                        <input  class="inputSty" type="number" id="adults" value="1" min="1" name="adults" required><br>
+                    </li>
+                    <li class="listSty">
+                        <label class="labelSty" for="name">Name:</label>
+                        <input  class="inputSty" type="text" id="name"  required><br>
+                    </li>
+                    <li class="listSty">
+                        <label class="labelSty" for="fromDate">From Date:</label>
+                        <input  class="inputSty" type="date" id="fromDate" name="fromDate" required><br>
+                    </li>
+                    <li class="listSty">
+                        <label class="labelSty" for="toDate">To Date:</label>
+                        <input  class="inputSty" type="date" id="toDate"  name="toDate" required><br>
+                    </li>
+                    <li class="listSty">
+                        <label class="labelSty" for="total">Total:</label>
+                        <input  class="inputSty" type="text" id="total"  name="total" readonly onclick="totalCalc()"><br>
+                    </li>
+                    <li style="display: flex; padding: 0.5em; justify-content: center;">
+                    <a href="payment.html">
+                        <input class="btn btn-outline-success" type="submit" value="Book Now">
+                    </a></li>
+                    </ul>
+                </form>
+            </div>
             <h2>Radison Blu Hotel</h2>
             <p>RATING</p>
             <p>5 STAR</p>
